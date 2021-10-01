@@ -2,8 +2,7 @@
 const mongoose = require("mongoose");
 
 // definir la uri de conexion
-const uri =
-  "mongodb+srv://anders79:vCAJvX2rsjcgvOc2@cluster0.8hggo.mongodb.net/university?retryWrites=true&w=majority";
+const uri = "";
 
 // extablecer la conexion
 mongoose.connect(uri);
