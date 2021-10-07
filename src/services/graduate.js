@@ -8,10 +8,8 @@ async function createGraduate({ graduateData, image }) {
   try {
     // creamos la referencia de donde va a guardar y con que nombre
     const storageRef = ref(storage, image.originalname);
-    // creamos un array de bytes que nos va a permir subir el archivo con el firebase
-    const bytes = new Uint8Array([image.buffer]);
     // sube el archivo al storage
-    const snapshot = await uploadBytes(storageRef, bytes);
+    const snapshot = await uploadBytes(storageRef, image.buffer);
     // obtenemos el url del archivo
     const downloadURL = await getDownloadURL(snapshot.ref);
     const newGraduate = {
